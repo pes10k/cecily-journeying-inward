@@ -7,27 +7,54 @@
     <link rel="stylesheet" href="/static/css/site.css">
     <title>Journeying Inward</title>
     <style>
+      body {
+        background-color: rgb(251, 237, 202);
+      }
+
+      @font-face {
+        font-family: 'Calligraffiti';
+        src: url("/static/fonts/calligraffiti.ttf");
+      }
+
+      .quote-text {
+        font-size: 1.6em;
+        font-family: Calligraffiti, sans-serif;
+      }
+
+      .quote-attr {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-weight: bold;
+      }
+
+      #text-col {
+        -ms-flex: 0 0 540px;
+        flex: 0 0 540px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       .vertical-center {
         min-height: 100%;
         min-height: 100vh;
-
         display: flex;
         align-items: center;
+      }
+
+      #background-col {
+        background-image: url("/static/images/background.jpg");
+        background-size: cover;
       }
     </style>
   </head>
   <body>
-    <div class="vertical-center">
-      <div class="container">
-        <div class="row">
-          <div class="col justify-content-center col-0 col-md-6 order-2 order-md-1">
-            <p>
-              <img src="/static/images/background.jpg" alt="Background image of planets" class="img-fluid d-block">
-            </p>
+      <div class="container-fluid vertical-center">
+        <div class="row vertical-center">
+          <div id="background-col" class="col justify-content-center col-0 col-lg-6 order-2 order-lg-1 vertical-center">
+            <p> </p>
           </div>
 
-          <div class="col justify-content-center text-center col-12 col-md-6 order-1 order-md-2">
-            <h1>Journeying Inward</h1>
+          <div id="text-col" class="col justify-content-center text-center col-12 col-lg-6 order-1 order-lg-2">
+            <h1 class="pt-3">Journeying Inward</h1>
             <h2>Deep Relaxation for Well-being and Renewal via Zoom</h2>
             <p>
               Explore body, mind and breath as you gently move into a peaceful space in which
@@ -35,10 +62,19 @@
               imagery, concluding with an opportunity for reflection and optional sharing.
             </p>
 
-            <p>
-              <img src="/static/images/js-chicago-il.png" alt="Relaxed, peaceful, completely calm and happy… I was blissful. JS, Chicago, IL" class="mb-3 img-fluid d-block">
-              <img src="/static/images/sb-portland-or.png" alt="A profoundly meditative experience, deeply relaxing and energizing. SB, Portland, OR" class="mb-3 img-fluid d-block">
-              <img src="/static/images/lb-dallas-tx.png" alt="I was floating… nowhere and everywhere. Fabulous!" class="mb-3 img-fluid d-block">
+            <p class="quote-text">
+              Relaxed, peaceful, completely calm and happy…<br>
+              I was blissful. <span class="quote-attr">JS, Chicago, IL</span>
+            </p>
+
+            <p class="quote-text">
+              A profoundly meditative experience,<br>
+              deeply relaxing and energizing. <span class="quote-attr">SB, Portland, OR</span>
+            </p>
+
+            <p class="quote-text">
+              I was floating… nowhere and everywhere<br>
+              Fabulous! <span class="quote-attr">LB, Dallas, TX</span>
             </p>
 
             <p>
@@ -51,6 +87,5 @@
           </div>
         </div>
       </div>
-    </div>
   </body>
 </html>
